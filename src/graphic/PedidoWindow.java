@@ -60,7 +60,7 @@ public class PedidoWindow extends JFrame {
 	private JLabel lblNewLabel_11;
 	private JTextField txfMarca;
 	private JButton btnSalvar;
-	private JButton btnCancelar;
+	private JButton btnVoltar;
 	private JLabel lblNewLabel_12;
 	private JTextField txfTelefone;
 	private JLabel lblNewLabel_13;
@@ -83,7 +83,7 @@ public class PedidoWindow extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		GridBagLayout gbl_contentPane = new GridBagLayout();
-		gbl_contentPane.columnWidths = new int[]{146, 178, 98, 143, 93, 0};
+		gbl_contentPane.columnWidths = new int[]{146, 178, 98, 158, 80, 0};
 		gbl_contentPane.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 		gbl_contentPane.columnWeights = new double[]{1.0, 1.0, 1.0, 1.0, 1.0, Double.MIN_VALUE};
 		gbl_contentPane.rowWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
@@ -426,7 +426,7 @@ public class PedidoWindow extends JFrame {
 		gbc_btnSalvar.gridy = 18;
 		contentPane.add(btnSalvar, gbc_btnSalvar);
 		
-		btnCancelar = new JButton(new AbstractAction("Cancelar") {
+		btnVoltar = new JButton(new AbstractAction("Cancelar") {
 			
 			@Override
 			public void actionPerformed(ActionEvent arg0) {
@@ -435,9 +435,10 @@ public class PedidoWindow extends JFrame {
 				new MenuWindow().setVisible(true);
 			}
 		});
-		GridBagConstraints gbc_btnCancelar = new GridBagConstraints();
-		gbc_btnCancelar.gridx = 4;
-		gbc_btnCancelar.gridy = 18;
-		contentPane.add(btnCancelar, gbc_btnCancelar);
+		btnVoltar.setText("Voltar");
+		GridBagConstraints gbc_btnVoltar = new GridBagConstraints();
+		gbc_btnVoltar.gridx = 4;
+		gbc_btnVoltar.gridy = 18;
+		contentPane.add(btnVoltar, gbc_btnVoltar);
 	}
 }
